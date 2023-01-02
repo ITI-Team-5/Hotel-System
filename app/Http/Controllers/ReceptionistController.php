@@ -36,6 +36,8 @@ class ReceptionistController extends Controller
         ->join('rooms', 'reservations.room_id', '=', 'rooms.id')
         ->select('clients.name', 'reservations.*','rooms.room_no')
         ->get();
+
+        return $ClientsReservation;
     }
 
    }
